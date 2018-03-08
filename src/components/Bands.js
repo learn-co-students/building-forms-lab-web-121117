@@ -3,9 +3,8 @@ import BandInput from './BandInput'
 
 class Bands extends Component {
   render(){
-    console.log(this.props.store.getState().bands)
     const bands = this.props.store.getState().bands.map((band, index) => {
-      return <li>{band.text}</li>
+      return <li>{band}</li>
     })
 
     return (
