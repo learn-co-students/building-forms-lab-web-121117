@@ -3,7 +3,8 @@ export default function manageBand(state = {
 }, action) {
   switch (action.type) {
     case 'ADD_BAND':
-      return Object.assign({}, state, { bands: state.bands.concat(action.band) });
+      console.log('Reducer hit', state)
+      return {bands: [...state.bands, action.band.text]};
     default:
       return state;
   }
